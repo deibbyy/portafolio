@@ -1,0 +1,33 @@
+{% load static %}
+<!-- Carga de archivos estáticos -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jon Deiby Estrada | {% block title%}{%endblock%}</title>
+    <!-- Título de la página con el bloque "title" -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+    <!-- Enlaces a los estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Enlace al archivo CSS de Font Awesome -->
+    <link rel="stylesheet" href="{% static 'main.css'%}">
+    <!-- Enlace al archivo CSS personalizado usando el tag "static" -->
+</head>
+<body>
+    {% include 'partials/navbar.html'%}
+    <!-- Inclusión de la plantilla parcial "navbar.html" -->
+   
+    <div class="container p-4">
+        {% block content%}
+        <!-- Este bloque "content" se reemplazará en la plantilla base -->
+        {% endblock %}
+    </div>
+    
+    {% include 'partials/footer.html'%}
+    <!-- Inclusión de la plantilla parcial "footer.html" -->
+</body> 
+</html>

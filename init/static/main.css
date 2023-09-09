@@ -1,0 +1,290 @@
+/* IMAGENES DE FONDO DE LAS PAGINAS */
+.home {
+    background-image: url(portfolio/home-bg.jpg);
+}
+
+.about {
+    background-image: url(portfolio/about-bg2.jpeg);
+}
+
+.portfolio {
+    background-image: url(portfolio/portfolio-bg.jpeg);
+}
+
+.imagen-fondo {
+    background-position: center center;
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-perfil {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.titulos {
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    background-color: #6d6d6d;
+    color: #dadada;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer__texto {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer__lista {
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.footer__icono {
+    color: #b9b9b9;
+    font-size: 30px;
+    padding: 0 10px;
+    display: block;
+}
+
+.footer__icono:hover {
+    color: rgb(255, 255, 255);
+    font-size: 33px;
+    transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    .footer__texto {
+        font-size: 14px;
+        flex-wrap: wrap;
+        font-weight: normal;
+        text-align: center;
+    }
+}
+
+/* CONOCIMIENTOS - MANEJO DE LOS ICONOS */
+.skills__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+}
+
+.card__skills {
+    margin: 20px 15px;
+    padding: 20px 20px;
+    max-height: 200px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill__logo {
+    width: 70px;
+    height: auto;
+}
+
+.skill__titulo {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #033F62;
+}
+
+/* NAVBAR */
+.navbar {
+    border-bottom: none;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.nav-link {
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+    width: 24px;
+    height: 2px;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    background-color: #fff;
+    width: 24px;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(8px);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* CONTACT ME */
+.contact {
+    background-image: url(portfolio/contact_me.jpg);
+    background-position: center center;
+    min-height: 60vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.0); /* Ajusta el valor de opacidad según tus preferencias (0.0 a 1.0) */
+}
+
+.contact .container {
+    padding: 80px 0;
+}
+
+.contact h2 {
+    font-size: 48px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact p {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact li {
+    margin: 10px 20px;
+    font-size: 32px; /* Ajusta el tamaño de fuente según tus preferencias */
+    color: #ffffff; /* Ajusta el color de texto según tus preferencias */
+    vertical-align: bottom;
+}
+
+.contact strong {
+    font-weight: bold;
+}
+
+.contact a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration-color: rgb(27, 27, 183);
+    color: red;
+}
+
+/* Estilos adicionales para el formulario de contacto (opcional) */
+.contact form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact input[type="submit"] {
+    background-color: #033F62;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #032c48;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+@media screen and (max-width: 768px) {
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+}

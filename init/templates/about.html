@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static%}
+
+<!-- CONTENIDO -->
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-4 offset-md-auto">
+                <!-- Imagen de perfil -->
+                <img class="img-fluid img-thumbnail img-circle img-perfil " src="../static/portfolio/foto-perfil.png" alt="">
+            </div>
+            <div class="col-6">
+                <!-- Descripción personal -->
+                <h4>Experiencia como desarrollador back-end con enfoque en Python y PostgreSQL.
+                    Conocimientos en metodologías SCRUM y experiencia en desarrollo de aplicaciones web.
+                    Competencias en trabajo en equipo, escucha activa, orientación al logro y comunicación asertiva.
+                </h4>
+            </div>
+        </div>
+
+        <div class="row d-flex pt-5">
+            <div class="col-12">
+                <!-- Formación académica -->
+                <h2 class="fw-bold">Formación Académica</h2>
+                {% for academic in academics %}
+                <h2 class="section-heading title"><strong>Formación:</strong>{{ academic.title }}</h2>
+                <p><strong>Institución:</strong>{{ academic.institution }}</p>
+                <p><strong>Estado:</strong>{{ academic.state }}</p>
+                <hr>
+                {% endfor %}
+                <br>
+                <!-- Experiencia laboral -->
+                <h2 class="fw-bold">Experiencia Laboral</h2>
+                {% for laboral in laborals %}
+                <h2 class="section-heading title">{{ laboral.title }}</h2>
+                <p>{{ laboral.description }}</p>
+                <p>{{ laboral.cargo }}</p>
+                <p>{{ laboral.date_from }}</p>
+                <hr>
+                {% endfor %}
+
+                <br>
+                <!-- Habilidades -->
+                <h2 class="fw-bold">Conocimientos</h2>
+                <section class="skills" id="skills">
+                    <div class="skills__container" id="skills">
+                        {% for skill in skills%}
+                        <div class="card__skills">
+                            <div class="skill__thumbnail">
+                                <img class="skill__logo" src="{{skill.image.url}}" alt="Python">
+                            </div>
+                            <div class="skill__texto">
+                                <p class="skill__titulo">{{skill.title}}</p>
+                            </div>
+                            <div class="skill__texto">
+                                <progress value={{skill.level}} max="10"></progress>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
